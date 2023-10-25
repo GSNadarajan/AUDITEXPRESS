@@ -1,8 +1,10 @@
 import React from "react";
 import Nav from "./Nav";
 import { useState } from "react";
-import viewTask from "../utils/DashboardContent";
-// import { updateTask } from "../utils/DashboardContent";
+
+import viewTask, { TaskProgress, addTask } from "../utils/DashboardContent";
+import { updateTask } from "../utils/DashboardContent";
+
 
 function Dashboard() {
   const sidebarContent = [
@@ -63,7 +65,7 @@ function Dashboard() {
     },
   ];
 
-  const [clickedButton, setClickedButton] = useState(""); // State to store the clicked button name
+  const [clickedButton, setClickedButton] = useState("Add task"); // State to store the clicked button name
 
   function updateClickedButton(buttonName) {
     setClickedButton(buttonName);
@@ -198,16 +200,32 @@ function Dashboard() {
           <div className="mt-20 container mx-auto text-center">
             {clickedButton === "View task" && (
               <>
-                
+
                 {viewTask()}
               </>
             )}
-            {/* {clickedButton === "Update task" && (
+            { {clickedButton === "Update task" && (
               <>
-                
+
                 {updateTask()}
               </>
-            )} */}
+
+            )}
+
+            {clickedButton === "Add task" && (
+              <>
+
+                {addTask()}
+              </>
+            )}
+
+            {clickedButton === "Task progress" && (
+              <>
+
+                {TaskProgress()}
+              </>
+            )}
+
           </div>
         </div>
       </div>
