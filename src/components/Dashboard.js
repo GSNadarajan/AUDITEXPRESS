@@ -1,5 +1,8 @@
 import React from "react";
 import Nav from "./Nav";
+import { useState } from "react";
+import viewTask from "../utils/DashboardContent";
+import { updateTask } from "../utils/DashboardContent";
 
 function Dashboard() {
   const sidebarContent = [
@@ -59,6 +62,12 @@ function Dashboard() {
       ),
     },
   ];
+
+  const [clickedButton, setClickedButton] = useState(""); // State to store the clicked button name
+
+  function updateClickedButton(buttonName) {
+    setClickedButton(buttonName);
+  }
 
   return (
     <div className="App">
@@ -149,7 +158,6 @@ function Dashboard() {
         </div>
         <div className="col-span-4 md:mx-24 mx-5">
           {" "}
-         
           <p className="mt-6 md:mt-20 text-black text-2xl mx-auto">
             Good Morning Dharsh !!
           </p>
@@ -157,16 +165,49 @@ function Dashboard() {
             Today Oct 05, 2023
           </p>
           <div className="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-2 md:gap-9">
-            <div className="p-5 text-center bg-[#E3F5FF] rounded-md">Add task</div>
-            <div className="p-5 text-center bg-[#E3F5FF] rounded-md">View task</div>
-            <div className="p-5 text-center bg-[#E3F5FF] rounded-md">Update task</div>
-            <div className="p-5 text-center bg-[#E3F5FF] rounded-md">
+            <button
+              type="button"
+              className="p-5 text-center bg-[#E3F5FF] rounded-md"
+              onClick={() => updateClickedButton("Add task")}
+            >
+              Add task
+            </button>
+            <button
+              type="button"
+              className="p-5 text-center bg-[#E3F5FF] rounded-md"
+              onClick={() => updateClickedButton("View task")}
+            >
+              View task
+            </button>
+            <button
+              type="button"
+              className="p-5 text-center bg-[#E3F5FF] rounded-md"
+              onClick={() => updateClickedButton("Update task")}
+            >
+              Update task
+            </button>
+
+            <button
+              type="button"
+              className="p-5 text-center bg-[#E3F5FF] rounded-md"
+              onClick={() => updateClickedButton("Task progress")}
+            >
               Task progress
-            </div>{" "}
+            </button>
           </div>
-          <div className="mt-9 container mx-auto bg-red-400 text-center p-9">
-            Hello
-            
+          <div className="mt-20 container mx-auto text-center">
+            {clickedButton === "View task" && (
+              <>
+                
+                {viewTask()}
+              </>
+            )}
+            {clickedButton === "Update task" && (
+              <>
+                
+                {updateTask()}
+              </>
+            )}
           </div>
         </div>
       </div>
