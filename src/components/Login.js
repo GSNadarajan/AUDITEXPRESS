@@ -41,7 +41,7 @@ function Login() {
                     <input
                       type="email"
                       id="email"
-                      className="w-full border rounded-md p-2"
+                      className="w-full border rounded-md p-2 "
                     />
                   </div>
                   <div className="mb-4">
