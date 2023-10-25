@@ -58,85 +58,14 @@ const Nav = () => {
       ),
     },
   ];
-
+ 
   return (
     <div>
-      <div className="desktop-sidebar bg-[#27005D] shadow hidden md:block">
-        <button
-          data-drawer-target="sidebar-multi-level-sidebar"
-          data-drawer-toggle="sidebar-multi-level-sidebar"
-          aria-controls="sidebar-multi-level-sidebar"
-          type="button"
-          className="inline-flex items-center p-2 mt-2 ml-3 text-sm text-black rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-        >
-          <svg
-            className="w-5 h-5 text-gray-600"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 17 14"
-          >
-            <path
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M1 1h15M1 7h15M1 13h15"
-            />
-          </svg>
-          {/* <span className="text-2xl text-white  ml-3">AudiXpress</span> */}
-          <div className="fixed font-semibold right-3 flex">
-            <span>
-              <img
-                src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?size=626&ext=jpg&ga=GA1.1.1691403598.1697040533&semt=sph"
-                className="h-6 mr-2 rounded-2xl -p-9"
-                alt="Profile logo"
-              />
-            </span>
-            <span className="text-1xl ">Dharsh</span>
-          </div>
-        </button>
-
-        <aside
-          id="sidebar-multi-level-sidebar"
-          className="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
-          aria-label="Sidebar"
-        >
-          <div className="h-full px-3 py-4 overflow-y-auto bg-[#27005D]">
-            <ul className="space-y-2 font-medium">
-              <li>
-                <a
-                  href="#"
-                  className="flex items-center p-2 text-white rounded-lg dark:text-white hover:bg-gray-100 hover:text-black dark:hover:bg-gray-700 group"
-                >
-                  <span className="ml-3">Task Manager</span>
-                </a>
-              </li>
-              <div className="mt-28">
-                <ul className="mt-28">
-                  {sidebarContent.map((item) => (
-                    <li key={item.id} className="mt-3 ml-3">
-                      <a
-                        href="#"
-                        className="flex items-center p-2 rounded-lg text-white hover:bg-white hover:text-black group"
-                      >
-                        {item.image}
-                        <span className="flex-1 ml-3 whitespace-nowrap">
-                          {item.name}
-                        </span>
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </ul>
-          </div>
-        </aside>
-      </div>
+     
 
       {/* --------------------------------------------------Mobile navigation start---------------------------------------------------- */}
 
-      <nav class=" bg-[#ffffff] shadow-lg md:hidden">
+      <nav class=" bg-[#ffffff] shadow-lg md:hidden ">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a href="https://flowbite.com/" class="flex items-center">
             <img
