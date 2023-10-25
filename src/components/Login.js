@@ -40,7 +40,7 @@ function Login() {
                     </label>
                     <input
                       type="email"
-                      id="email"
+                      id="emailid"
                       className="w-full border rounded-md p-2  "
                     />
                   </div>
