@@ -204,7 +204,7 @@ function Dashboard() {
                 {viewTask()}
               </>
             )}
-            { {clickedButton === "Update task" && (
+             {clickedButton === "Update task" && (
               <>
 
                 {updateTask()}
