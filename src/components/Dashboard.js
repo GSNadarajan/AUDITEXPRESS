@@ -2,7 +2,7 @@ import React from "react";
 import Nav from "./Nav";
 import { useState } from "react";
 import viewTask from "../utils/DashboardContent";
-import { updateTask } from "../utils/DashboardContent";
+// import { updateTask } from "../utils/DashboardContent";
 
 function Dashboard() {
   const sidebarContent = [
@@ -202,12 +202,12 @@ function Dashboard() {
                 {viewTask()}
               </>
             )}
-            {clickedButton === "Update task" && (
+            {/* {clickedButton === "Update task" && (
               <>
                 
                 {updateTask()}
               </>
-            )}
+            )} */}
           </div>
         </div>
       </div>

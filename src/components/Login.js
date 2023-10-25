@@ -19,19 +19,20 @@ function Login() {
       {loggedIn ? (
         <p>You are already logged in. Redirecting to the dashboard...</p>
       ) : (
-       
         <div className="flex justify-center items-center min-h-screen">
           <div className="grid grid-cols-1 md:grid-cols-2 md:gap-10">
             <div className="md:order-2 mx-2">
-              <img
-                src={Homeimage}
-                alt="Login Image"
-                className="w-full h-auto -m-7"
-              />
+              <div className="flex justify-center items-center">
+                <img
+                  src={Homeimage}z
+                  alt="Login Image"
+                  className="md:w-full h-72 w-72 md:w-92 md:h-92 -m-7 text-center mt-7"
+                />
+              </div>
             </div>
-            <div className="md:order-1">
+            <div className="md:order-1 mx-auto">
               <div className="p-4">
-                <h2 className="text-2xl font-bold mb-1">Welcome back!</h2>
+                <h2 className="text-2xl font-bold mb-1 mt-5">Welcome back!</h2>
                 <h3 className="mb-6">Please login to Manage your Tasks!!</h3>
                 <form>
                   <div className="mb-4">
